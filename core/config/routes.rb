@@ -1,4 +1,4 @@
-Spree::Core::Engine.routes.draw do
+Spree::Core::Engine.add_routes do
 
   root :to => 'home#index'
 
@@ -186,3 +186,6 @@ Spree::Core::Engine.routes.draw do
   match '/content/cvv', :to => 'content#cvv', :as => :cvv
   match '/content/*path', :to => 'content#show', :via => :get, :as => :content
 end
+
+
+Spree::Core::Engine.draw_routes
